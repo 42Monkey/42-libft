@@ -10,9 +10,17 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-// int	main(void)
-// {
-// 	char	c = 'A';
+int main(void)
+{
+	char c1 = 'A';
+	char c2 = 'b';
+	char c3 = '1';
+	char c4 = '!';
 
-// 	return (ft_isalpha(c));
-// }
+	printf("'%c': %d (ft) vs %d (std)\n", c1, ft_isalpha(c1), isalpha(c1) != 0);
+	printf("'%c': %d (ft) vs %d (std)\n", c2, ft_isalpha(c2), isalpha(c2) != 0);
+	printf("'%c': %d (ft) vs %d (std)\n", c3, ft_isalpha(c3), isalpha(c3) != 0);
+	printf("'%c': %d (ft) vs %d (std)\n", c4, ft_isalpha(c4), isalpha(c4) != 0);
+
+	return 0;
+}
