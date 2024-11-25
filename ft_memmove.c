@@ -5,11 +5,13 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	char	*first;
 	char	*last;
+	size_t	i;
 
-	if (!dst || !src || n == 0)
-		return (NULL);
 	first = (char *)src;
 	last = (char *)dst;
+	i = 0;
+	if (!dst && !src)
+		return (NULL);
 	if (last > first)
 	{
 		while (n-- > 0)
@@ -19,7 +21,11 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	else
 	{
-		ft_memcpy(last, first, n);
+		while (i < n)
+		{
+			last[i] = first[i];
+			i++;
+		}
 	}
 	return (dst);
 }
