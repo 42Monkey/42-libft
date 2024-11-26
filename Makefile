@@ -40,16 +40,19 @@ $(NAME):	$(OBJ_FILES)
 			$(CC) $(CFLAGS) -c $< -o $@
 			@echo "$(GREEN)Successfully compiled $<$(NC)\n"
 
-bonus: 		$(BOBJ_FILES)
-			$(AR) $@ $^
-			@echo "$(GREEN)Successfully created $(NAME)$(NC)\n"
+bonus: 		.bonus
+
+.bonus: 	$(NAME) $(BOBJ_FILES)
+			$(AR) $(NAME) $(BOBJ_FILES)
+			@touch .bonus
+			@echo "$(GREEN)Successfully added bonus objects to $(NAME)$(NC)\n"
 
 clean:
-			$(RM) $(OBJ_FILES) $(BOBJ_FILES)
+			$(RM) $(OBJ_FILES) $(BOBJ_FILES) .bonus
 			@echo "$(YELLOW)Successfully removed object files$(NC)\n"
 
 fclean:		clean
-			$(RM) $(NAME)
+			$(RM) $(NAME) .bonus
 			@echo "$(YELLOW)Successfully removed everything $(NAME)$(NC)\n"
 
 re:		fclean all
