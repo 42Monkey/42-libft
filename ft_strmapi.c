@@ -36,4 +36,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 // 	printf("string1: %s\n", string1);
 // 	printf("string2: %s\n", string2);
+// 	free(string2);
+// 	return (0);
 // }

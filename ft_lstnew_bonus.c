@@ -21,5 +21,6 @@ t_list	*ft_lstnew(void *content)
 // 	t_list	*node = ft_lstnew(string);
 
 // 	printf("%s\n", (char *)node->content);
+// 	free(node);
 // 	return (0);
 // }

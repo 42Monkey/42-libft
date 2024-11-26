@@ -47,8 +47,17 @@ char	*ft_itoa(int n)
 
 // int	main(void)
 // {
-// 	printf("%s\n", ft_itoa(INT_MAX));
-// 	printf("%s\n", ft_itoa(0));
-// 	printf("%s\n", ft_itoa(INT_MIN));
+// 	char *str1 = ft_itoa(INT_MAX);
+// 	char *str2 = ft_itoa(0);
+// 	char *str3 = ft_itoa(INT_MIN);
+
+// 	printf("%s\n", str1);
+// 	printf("%s\n", str2);
+// 	printf("%s\n", str3);
+
+// 	free(str1);
+// 	free(str2);
+// 	free(str3);
+
 // 	return (0);
 // }
